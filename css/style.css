@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #05751d, #0c8b08);
+}
+
+.container {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+}
+
+.pipe {
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+  width: 130px;
+  position: absolute;
+  bottom: 0;
+}
+
+.mario-jump {
+  animation: jump-animation 500ms ease-in-out;
+}
+
+.clouds {
+  position: absolute;
+  top: 20px;
+  width: 400px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -50px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump-animation {
+  0% {
+    bottom: 0;
+  }
+  
+  45% {
+    bottom: 185px;
+  }
+
+  50% {
+    bottom: 190px;
+  }
+
+  55% {
+    bottom: 185px;
+  }
+  
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -400px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
